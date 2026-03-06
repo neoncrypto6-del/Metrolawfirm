@@ -1,0 +1,33 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@layer base {
+  body {
+    @apply bg-metro-black text-metro-body font-inter antialiased selection:bg-metro-gold selection:text-metro-black;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair text-white tracking-tight;
+  }
+}
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(197, 165, 90, 0.3);
+  }
+  .border-glow:hover {
+    box-shadow: 0 0 15px rgba(197, 165, 90, 0.15);
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
